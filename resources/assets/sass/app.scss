@@ -1,0 +1,139 @@
+
+// Fonts
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "./readable.css";
+
+.center{
+  text-align: center;
+}
+.left-align{
+  text-align: left;
+}
+
+.right-align{
+  text-align: right;
+}
+
+
+.welcome{
+  header.banner{
+    position: absolute;
+    top: 0;
+    z-index:-1;
+    padding: 15px;
+    background-color : #0a9b96;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 320px;
+  }
+
+  .content{
+    padding: 20px;
+    max-width: 90%;
+    margin : 0 auto;
+    margin-top: 80px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 1px 0 1px 1px rgba(0,0,0,0.3);
+   
+    .personal-information{
+      text-align: center;
+      max-width: 450px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      color: #444;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      display: inline-flex;
+      .img{
+        height:120px;
+        width: 120px;
+        border-radius: 50%;
+        display: inline-block;
+        background-size: contain;
+        background-position : center center;
+        background-repeat : no-repeat;
+        img{
+          display: none;
+        }
+
+      }
+
+      ul.pi-items{
+        li.pi-item{
+          display: inline-block;
+          list-style: none;
+          margin:10px;
+          padding: 5px;
+        }
+      }
+
+      h1{
+        font-size: 2.2rem;
+      }
+      h3{
+        font-size: 1.8rem;
+      }
+
+      h4{
+        font-size: 1.5rem;
+      }
+
+    }
+
+    .technologies{
+      ul{
+        li{
+          display: inline-block;
+          padding: 5px;
+          margin: 5px;
+          img{
+            //background-color: rgba(50,50,50,0.1);
+            max-height: 65px;
+          }
+        }
+      }
+    }
+
+    .abilities{
+      .label-success {
+        background-color: #2ab27b;
+        padding: 10px;
+        margin: 5px;
+        display: inline-block;
+      }
+    }
+
+    .libraries{
+      .panel-body{
+        min-height: 120px;
+      }
+    }
+  }
+
+  @media screen and(max-width:600px){
+    .content{
+      margin-top: 10px;
+      max-width: 95%;
+    }    
+  }
+}
+
+footer{
+  padding: 15px;
+  background-color: #0A9B96;
+  color: white;
+}
