@@ -15928,6 +15928,11 @@ button.close {
   }
 }
 
+html,
+body {
+  font-size: 16px;
+}
+
 .center {
   text-align: center;
 }
@@ -15952,6 +15957,17 @@ button.close {
   color: black !important;
 }
 
+.md-padding {
+  padding: 24px;
+}
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 nav.navbar-default {
   background-color: transparent;
   border: 0;
@@ -15974,10 +15990,11 @@ nav.navbar-default .navbar-brand {
 
 .welcome {
   background-color: white;
+  margin-top: 110px;
 }
 
 .welcome header.banner {
-  padding: 15px;
+  padding: 0 15px 2.2em 15px;
   background-color: #0a9b96;
   width: 100%;
   margin-top: -60px;
@@ -15998,6 +16015,12 @@ nav.navbar-default .navbar-brand {
   -webkit-clip-path: polygon(50% 0, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
   clip-path: polygon(50% 0, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
   -moz-clip-path: polygon(50% 0, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+}
+
+@media screen and (min-width: 400px) and (max-width: 642px) {
+  .welcome header.banner {
+    padding-bottom: 3em;
+  }
 }
 
 .welcome header.banner .personal-information {
@@ -16037,6 +16060,10 @@ nav.navbar-default .navbar-brand {
   display: none;
 }
 
+.welcome header.banner .personal-information ul.pi-items {
+  margin-bottom: 27px;
+}
+
 .welcome header.banner .personal-information ul.pi-items li.pi-item {
   display: inline-block;
   list-style: none;
@@ -16045,19 +16072,32 @@ nav.navbar-default .navbar-brand {
 }
 
 .welcome header.banner .personal-information h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
+  margin: 0;
+  margin-top: 0.5em;
 }
 
 .welcome header.banner .personal-information h2 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .welcome header.banner .personal-information h3 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 .welcome header.banner .personal-information h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .welcome header.banner .personal-information h1 {
+    font-size: 1.5rem;
+  }
+
+  .welcome header.banner .personal-information .img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .welcome .pi-item-texts {
@@ -16088,6 +16128,16 @@ nav.navbar-default .navbar-brand {
   color: #eee;
 }
 
+@media screen and (max-width: 1020px) {
+  .welcome ul.pi-items li.pi-item {
+    margin: 7px !important;
+  }
+
+  .welcome ul.pi-items li.pi-item i {
+    font-size: 1.3em;
+  }
+}
+
 .welcome .content {
   text-align: center;
   background-color: white;
@@ -16112,6 +16162,17 @@ nav.navbar-default .navbar-brand {
   background-color: #F1F5FA;
 }
 
+.welcome .content section:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .welcome .content section p {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+}
+
 .welcome .content .technologies ul li {
   display: inline-block;
   padding: 5px;
@@ -16131,6 +16192,13 @@ nav.navbar-default .navbar-brand {
 
 .welcome .content .libraries .panel-body {
   min-height: 120px;
+}
+
+.welcome .content .cv {
+  background-repeat: no-repeat;
+  background-position: 50% 143%;
+  background-size: contain;
+  background-attachment: fixed;
 }
 
 .welcome .content .panel {

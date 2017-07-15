@@ -2,7 +2,7 @@
 
 @section('content')
 <div class=" welcome flex-center position-ref full-height">
-    <header class="banner" >
+    <header class="banner"  >
          <div class="personal-information">
             <div class="img" url-image="{{asset('images/profile.png')}}">
                 <img src="{{asset('images/profile.png')}}" alt="Cesar Santana">
@@ -151,6 +151,16 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+
+          <section class="cv left-align bg-img" url-image="{{asset('images/bg-footer.jpeg')}}" >
+            <div class="-container">
+                <h3 class="bold white-text">Descargar CV</h3>
+                <div class="center md-padding">
+                    <a href="" class="btn btn-success btn-lg">Descargar</a> 
                 </div>
             </div>
         </section>

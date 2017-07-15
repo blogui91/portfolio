@@ -11,6 +11,10 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "./readable.css";
 
+html ,body{
+  font-size: 16px;
+}
+
 .center{
   text-align: center;
 }
@@ -32,6 +36,17 @@
 
 .black-text{
   color: black!important;
+}
+
+.md-padding{
+  padding: 24px;
+}
+
+.bg-img{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 nav.navbar-default{
@@ -57,8 +72,9 @@ nav.navbar-default{
 
 .welcome{
   background-color: white;
+  margin-top: 110px;
   header.banner{
-    padding: 15px;
+    padding: 0 15px 2.2em 15px;
     background-color : #0a9b96;
     width: 100%;
     margin-top:-60px;
@@ -75,7 +91,10 @@ nav.navbar-default{
     -webkit-clip-path: polygon(50% 0,100% 0,100% 65%,50% 100%,0 65%,0 0);
     clip-path: polygon(50% 0,100% 0,100% 65%,50% 100%,0 65%,0 0);
     -moz-clip-path: polygon(50% 0,100% 0,100% 65%,50% 100%,0 65%,0 0);
-    
+
+    @media screen and (min-width:400px) and (max-width:642px){
+      padding-bottom:3em;
+    }
     .personal-information{
       text-align: center;
       max-width: 450px;
@@ -100,7 +119,10 @@ nav.navbar-default{
 
       }
 
+     
+
       ul.pi-items{
+        margin-bottom:27px;
         li.pi-item{
           display: inline-block;
           list-style: none;
@@ -110,17 +132,31 @@ nav.navbar-default{
       }
 
       h1{
-        font-size: 3.5rem;
+        font-size: 2rem;
+        margin: 0;
+        margin-top: 0.5em;
+
       }
       h2{
-        font-size: 1.8rem;
+        font-size: 1.3rem;
       }
       h3{
-        font-size: 1.8rem;
+        font-size: 1.2rem;
       }
 
       h4{
-        font-size: 1.5rem;
+        font-size: 1rem;
+      }
+
+      @media screen and(max-width:500px){
+        h1{
+          font-size: 1.5rem;
+        }
+
+        .img{
+          width:80px;
+          height:80px;
+        }
       }
 
     }
@@ -152,6 +188,14 @@ nav.navbar-default{
         color: #eee;
       }
     }
+    @media screen and(max-width:1020px){
+      li.pi-item{
+        margin: 7px !important;
+        i{
+          font-size:1.3em;
+        }
+      }
+    }
   }
 
   .content{
@@ -170,6 +214,17 @@ nav.navbar-default{
       }
       &:nth-child(even){
         background-color :#F1F5FA;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      @media screen and(max-width:500px){
+        p{
+          font-size: 1.1rem;
+          font-weight: 400;
+        }
       }
     }
 
@@ -200,6 +255,14 @@ nav.navbar-default{
       .panel-body{
         min-height: 120px;
       }
+    }
+
+    .cv{
+      background-repeat: no-repeat;
+      background-position: 50% 143%;
+      background-size: contain;
+      background-attachment: fixed;
+      
     }
 
 
