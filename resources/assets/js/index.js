@@ -3,6 +3,9 @@ function init(){
     window.Portfolio.refreshImages = printImages
     window.Portfolio.refreshImages();
       $('[data-toggle="popover"]').popover()
+
+    $('ul.pi-items i').on('click', switchItem)
+
 }
 
 function printImages(){
@@ -14,6 +17,19 @@ function printImages(){
         image.style.backgroundImage = `url(${url})`
     }
 
+}
+
+function switchItem(e){
+    $('.pi-item , i[item-name]').removeClass('active')
+    $(e.target).addClass('active')
+                                        
+    let attribute = $(e.target).attr('item-name')
+
+    console.log(attribute)
+
+    $('.pi-item-texts [item-name]').removeClass('active');
+    $(`.pi-item-texts [item-name=${attribute}]`).addClass('active');
+    
 }
 
 $(document).ready(init)

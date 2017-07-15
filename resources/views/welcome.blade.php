@@ -2,75 +2,81 @@
 
 @section('content')
 <div class=" welcome flex-center position-ref full-height">
-    <header class="banner" url-image="{{asset('images/banner.jpg')}}"></header>
-    <section class="content">
-        <div class="personal-information">
+    <header class="banner" >
+         <div class="personal-information">
             <div class="img" url-image="{{asset('images/profile.png')}}">
                 <img src="{{asset('images/profile.png')}}" alt="Cesar Santana">
             </div>
 
-            <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Descargar CV</button>
-
-            <h1>{{$user->name}}</h1>
-            <h3>{{$user->career}}</h3>
-            <h4>{{$user->tagline}}</h4>
+            {{--  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Descargar CV</button>  --}}
+            <h1> {{$user->tagline}}</h1>
+            <div class="pi-item-texts">
+                <h2 item-name="name" class="pi-item-text active">{{$user->name}} <br> 26 Años</h2>
+                <h2 item-name="location" class="pi-item-text">Monterrey, Nuevo Léon, México</h2>
+                <h2 item-name="career" class="pi-item-text">{{$user->career}}</h2>
+                <h2 item-name="phone" class="pi-item-text">+52 311 260 1548</h2>
+                <h2 item-name="email" class="pi-item-text">{{$user->email}}</h2>
+                <h2 item-name="github" class="pi-item-text"> <a class="white-text" target="_blank" href="https://github.com/blogui91">https://github.com/blogui91</a>  </h2>
+                <h2 item-name="medium" class="pi-item-text"> <a class="white-text" target="_blank" href="https://medium.com/@blogui91">https://medium.com/@blogui91</a>  </h2>
+            </div>
 
             <ul class="pi-items">
-                <li class="pi-item">
-                    <i class="fa fa-2x fa-male" aria-hidden="true"></i> 
+                <li item-name="name" class="pi-item ">
+                    <a href="#">          
+                        <i item-name="name" class="fa fa-2x fa-male active" aria-hidden="true"></i> 
+                    </a>
                 </li>
-                <li class="pi-item">
-                    <i class="fa fa-2x fa-map-marker" aria-hidden="true"></i>
+                <li item-name="location" class="pi-item">
+                    <a href="#">          
+                        <i item-name="location" class="fa fa-2x fa-map-marker" aria-hidden="true"></i>
+                    </a>
                 </li>
-                <li class="pi-item">
-                    <i class="fa fa-2x fa-graduation-cap" aria-hidden="true"></i>
+                <li item-name="career" class="pi-item">
+                    <a href="#">          
+                        <i item-name="career" class="fa fa-2x fa-graduation-cap" aria-hidden="true"></i>
+                    </a>
                 </li>
-                <li class="pi-item">
-                    <i class="fa fa-2x fa-mobile" aria-hidden="true"></i>
+                <li item-name="phone" class="pi-item">
+                    <a href="#">          
+                        <i item-name="phone" class="fa fa-2x fa-mobile" aria-hidden="true"></i>
+                    </a>
                 </li>
-                <li class="pi-item">
-                    <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+                <li item-name="email" class="pi-item">
+                    <a href="#">          
+                        <i item-name="email" class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+                    </a>
                 </li>
-                <li class="pi-item"><i class="fa fa-2x fa-users" aria-hidden="true"></i></li>
+                <li item-name="github" class="pi-item">
+                    <a href="#">          
+                        <i item-name="github" class="fa fa-2x fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                 <li item-name="medium" class="pi-item">
+                    <a href="#">          
+                        <i item-name="medium" class="fa fa-2x fa-medium" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+
+                    
             </ul>
         </div>
+    </header>
+    <div class="content">
+       
 
-        <div class="about-me left-align">
-            <blockquote>
-                <h3>Sobre mí</h3>
+        <section class="about-me left-align">
+            <div class="container">
+                <h3 class="bold">Sobre mí</h3>
                 <p>{{$user->description}}</p>
                 <small>Cesar Santana</small>
-            </blockquote>
-        </div>
+            </div>
+        </section>
 
-        <div class="technologies left-align">
-            <blockquote>
-                <h3>Frameworks & Librerías</h3>
-                <ul>
-                    <li><img src="{{asset('images/angularjs.png')}}" alt=""></li>
-                    <li><img src="{{asset('images/vuejs.png')}}" alt=""></li>
-                    <li><img style="background-color:#777;padding:5px;" src="{{asset('images/angular.png')}}" alt=""></li>
-                    <li><img src="{{asset('images/react-webpack.png')}}" alt=""></li>
-                    
-                    <li><img src="{{asset('images/adonisjs.jpg')}}" alt=""></li>
-                    <li><img src="{{asset('images/expressjs.png')}}" alt=""></li>
-                    <li><img src="{{asset('images/mongoose.png')}}" alt=""></li>
-                    <li><img src="{{asset('images/nuxtjs.png')}}" alt=""></li>
-                    <li><img src="{{asset('images/sass.svg')}}" alt=""></li>
-                    <li><img src="{{asset('images/cordova.png')}}" alt=""></li>
-                    <li><img src="{{asset('images/laravel.svg')}}" alt=""></li>
-                    <li><img src="{{asset('images/laravelmix.svg')}}" alt=""></li>
-                    
-                    
-                    
-                    
-                </ul>
-            </blockquote>
-        </div>
-
-        <div class="abilities left-align">
-            <blockquote>
-                <h3>Habilidades y Conocimientos</h3>
+        <section class="abilities left-align">
+            <div class="container">
+                <h3 class="bold">Habilidades y Conocimientos</h3>
                 <span class="label label-success">API Rest</span>
                 <span class="label label-success">Aplicaciones Híbridas</span>
                 <span class="label label-success">JWTs</span>
@@ -86,13 +92,35 @@
                 <span class="label label-success">TypeScript</span>
                 <span class="label label-success">Quasar</span>
                 <span class="label label-success">Webcomponents</span>
-            </blockquote>
-        </div>
+            </div>
+        </section>
 
-        <div class="libraries left-align">
-            <blockquote>
-                <h3>Librerías propias</h3>
-                
+        <section class="technologies left-align">
+            <div class="container">
+                <h3 class="bold">Frameworks & Librerías</h3>
+                <ul>
+                    <li><img src="{{asset('images/angularjs.png')}}" alt=""></li>
+                    <li><img src="{{asset('images/vuejs.png')}}" alt=""></li>
+                    <li><img style="background-color:#777;padding:5px;" src="{{asset('images/angular.png')}}" alt=""></li>
+                    <li><img src="{{asset('images/react-webpack.png')}}" alt=""></li>
+                    
+                    <li><img src="{{asset('images/adonisjs.jpg')}}" alt=""></li>
+                    <li><img src="{{asset('images/expressjs.png')}}" alt=""></li>
+                    <li><img src="{{asset('images/mongoose.png')}}" alt=""></li>
+                    <li><img src="{{asset('images/nuxtjs.png')}}" alt=""></li>
+                    <li><img src="{{asset('images/sass.svg')}}" alt=""></li>
+                    <li><img src="{{asset('images/cordova.png')}}" alt=""></li>
+                    <li><img src="{{asset('images/laravel.svg')}}" alt=""></li>
+                    <li><img src="{{asset('images/laravelmix.svg')}}" alt=""></li>
+                    
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="libraries left-align">
+            <div class="container">
+                <h3 class="bold">Librerías propias</h3>
                 <div class="row">
                     <div class="col col-md-6 col-sm-12">
                         <div class="panel panel-primary">
@@ -124,8 +152,8 @@
                         </div>
                     </div>
                 </div>
-            </blockquote>
-        </div>
-    </section>
+            </div>
+        </section>
+    </div>
 </div>
 @endsection

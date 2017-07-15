@@ -1,6 +1,8 @@
 
 // Fonts
 //@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 
 // Variables
 @import "variables";
@@ -20,40 +22,66 @@
   text-align: right;
 }
 
+.bold{
+  font-weight: bold;
+}
+
+.white-text{
+  color: white!important;
+}
+
+.black-text{
+  color: black!important;
+}
+
+nav.navbar-default{
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  color: white;
+  background-color: #6bb756;
+    background: linear-gradient(to right, rgba(148, 125, 179, 0.95) ,rgba(0,143,104,.95));
+    margin-bottom: 0;
+  .navbar-nav > li > a {
+      color: #fff;
+  }
+
+  .navbar-brand{
+    color: white;
+  }
+}
+
+
+
+
 
 .welcome{
+  background-color: white;
   header.banner{
-    position: absolute;
-    top: 0;
-    z-index:-1;
     padding: 15px;
     background-color : #0a9b96;
     width: 100%;
+    margin-top:-60px;
+    background-color: #6bb756;
+    background: linear-gradient(to right, rgba(148, 125, 179, 0.95) ,rgba(0,143,104,.95));
+
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 320px;
-  }
-
-  .content{
-    padding: 20px;
-    max-width: 90%;
-    margin : 0 auto;
-    margin-top: 80px;
-    text-align: center;
-    background-color: white;
-    box-shadow: 1px 0 1px 1px rgba(0,0,0,0.3);
-   
+    min-height: 420px;
+    -webkit-clip-path: polygon(50% 0,100% 0,100% 65%,50% 100%,0 65%,0 0);
+    clip-path: polygon(50% 0,100% 0,100% 65%,50% 100%,0 65%,0 0);
+    -moz-clip-path: polygon(50% 0,100% 0,100% 65%,50% 100%,0 65%,0 0);
+    
     .personal-information{
       text-align: center;
       max-width: 450px;
       color: white;
       display: flex;
       flex-direction: column;
-      color: #444;
       justify-content: center;
       text-align: center;
       align-items: center;
@@ -82,7 +110,10 @@
       }
 
       h1{
-        font-size: 2.2rem;
+        font-size: 3.5rem;
+      }
+      h2{
+        font-size: 1.8rem;
       }
       h3{
         font-size: 1.8rem;
@@ -92,6 +123,54 @@
         font-size: 1.5rem;
       }
 
+    }
+    
+  }
+
+  .pi-item-texts{
+    min-height:60px;
+    .pi-item-text{
+      display: none;
+    }
+
+    .pi-item-text.active{
+      display: block; 
+    }
+  }
+
+  ul.pi-items{
+    padding: 0;
+    li.pi-item{
+      cursor: pointer;
+      i{
+        color:#ccc;
+      }
+    }
+
+    li.pi-item{
+      i.active{
+        color: #eee;
+      }
+    }
+  }
+
+  .content{
+    text-align: center;
+    background-color: white;
+    width:100%;
+    section{
+      margin-bottom:2em;
+      padding: 24px;
+      min-height: 320px;
+      >h3{
+        margin-bottom:2em;
+      }
+      p{
+        font-size: 1.25em;
+      }
+      &:nth-child(even){
+        background-color :#F1F5FA;
+      }
     }
 
     .technologies{
@@ -122,18 +201,59 @@
         min-height: 120px;
       }
     }
+
+
+    .panel{
+      border-radius: 0;
+      > .panel-heading{
+        border-radius: 0;
+        border-color: #179375;
+        background-color : #179375;
+      }
+    }
   }
 
   @media screen and(max-width:600px){
     .content{
       margin-top: 10px;
       max-width: 95%;
-    }    
+    }  
+
+    .welcome header.banner .personal-information .img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      display: inline-block;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .welcome header.banner .personal-information h1 {
+        font-size: 2.5rem;
+    }
+
+
+    header.banner{
+      min-height: 300px;
+    }
+    .welcome header.banner .personal-information h2 {
+        font-size: 1.8rem;
+    }
+    .welcome ul.pi-items li.pi-item i {
+        font-size: 1em;
+    }
+
+    .welcome ul.pi-items li.pi-item i {
+        color: #ccc;
+    }
   }
 }
 
 footer{
   padding: 15px;
-  background-color: #0A9B96;
+  background-color: #6bb756;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(148, 125, 179, 0.95)), to(rgba(0, 143, 104, 0.95)));
+  background: linear-gradient(to right, rgba(148, 125, 179, 0.95), rgba(0, 143, 104, 0.95));
   color: white;
 }
