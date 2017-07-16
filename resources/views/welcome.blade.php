@@ -157,7 +157,7 @@
 
 
           <section class="cv left-align bg-img" url-image="{{asset('images/bg-footer.jpeg')}}" >
-            <div class="-container">
+            <div class="container">
                 <h3 class="bold white-text">Descargar CV</h3>
                 <div class="center md-padding">
                     <a href="" class="btn btn-success btn-lg">Descargar</a> 
