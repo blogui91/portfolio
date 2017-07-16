@@ -4,7 +4,7 @@
 <div class=" welcome flex-center position-ref full-height">
     <header class="banner"  >
          <div class="personal-information">
-            <div class="img" url-image="{{asset('images/profile.png')}}">
+            <div class="img" url-image="{{asset('images/profile.jpg')}}">
                 <img src="{{asset('images/profile.png')}}" alt="Cesar Santana">
             </div>
 

@@ -110,9 +110,12 @@ nav.navbar-default{
         width: 120px;
         border-radius: 50%;
         display: inline-block;
-        background-size: contain;
+        background-size: cover;
         background-position : center center;
         background-repeat : no-repeat;
+        background-color:transparent;
+        //background: -webkit-gradient(linear, left top, right top, from(rgba(148, 125, 179, 0.95)), to(rgba(0, 143, 104, 0.95)));
+        //background: linear-gradient(to right, rgba(148, 125, 179, 0.95), rgba(0, 143, 104, 0.95));
         img{
           display: none;
         }
@@ -222,7 +225,7 @@ nav.navbar-default{
 
       @media screen and(max-width:500px){
         p{
-          font-size: 1.1rem;
+          font-size: 1rem;
           font-weight: 400;
         }
       }
