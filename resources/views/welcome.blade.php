@@ -129,28 +129,57 @@
                                             <div class="project-logo" url-image="{{asset($project->logo)}}"></div>
                                             <p>{{$project->description}}</p>
                                             <a target="_blank" href="{{$project->url}}" class="btn btn-sm btn-primary">Ver</a>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-sm btn-success hide" data-toggle="modal" data-target="#project-{{$project->id}}">
+                                                Tecnologias usadas
+                                            </button>
+
+                                            
+
 
                                             <div class="technologies">
-                                                <p>Tecnologías</p>
-                                                <ul class="technologies-list">
-                                                    <li>
-                                                        <img src="{{asset('images/laravel.svg')}}" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="{{asset('images/vuejs.png')}}" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="{{asset('images/angularjs.png')}}" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="{{asset('images/laravelmix.svg')}}" alt="">
-                                                    </li>
-                                                </ul> 
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="project-{{$project->id}}" tabindex="-1" role="dialog" aria-labelledby="project-{{$project->id}}Label">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="project-{{$project->id}}Label">Modal title</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            
+                                                            <ul class="technologies-list">
+                                                                @foreach($project->technologies as $technology)
+                                                                    <li>
+                                                                        <img src="{{$technology->image}}" alt="">
+                                                                    </li>
+                                                                @endforeach
+                                                            </ul>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
                                             </div>
                                         </div>
                                     </div>
                                     <div class="project-footer">
-                                        <small><b>{{$project->name}}</b></small> 
+                                        <small><b>{{$project->name}}</b></small><br>
+                                        <div class="project-technologies">
+                                            <ul class="technologies-list">
+                                                @foreach($project->technologies as $technology)
+                                                    <li>
+                                                        <img src="{{$technology->image}}" alt="">
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        
+                                        </div> 
                                     </div>
                                 </div>
                             @endforeach
